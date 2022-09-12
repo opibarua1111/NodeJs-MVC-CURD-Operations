@@ -15,12 +15,13 @@ app.use(express.json());
 app.use("/api/v1/user", usersRoutes);
 
 app.get("/", (req, res) => {
-  res.render("home.ejs", {
-    id: 1,
-    user: {
-      name: "Opi",
-    },
-  });
+  // res.render("home.ejs", {
+  //   id: 1,
+  //   user: {
+  //     name: "Opi",
+  //   },
+  // });
+  res.send("server running......");
 });
 
 app.all("*", (req, res) => {
